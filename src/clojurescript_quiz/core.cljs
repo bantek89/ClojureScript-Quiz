@@ -1,21 +1,36 @@
 (ns clojurescript-quiz.core
     (:require
-      [reagent.core :as r]
+      [reagent.core :as r :refer [atom]]
        [ajax.core :refer [GET]]))
 
-(defn handler [response]
-  (prn (str response)))
+(defn fetch-data! [data]
+  (GET "https://opentdb.com/api.php?amount=10&category=26&type=multiple"
+   {:handler #(reset! data %)
+     :error-handler (fn [{:keys [status status-text]}]
+                      (js/console.log status status-text))}))
 
-(defn error-handler [{:keys [status status-text]}]
-  (prn (str "error: " status " " status-text)))
-
-(GET "https://opentdb.com/api.php?amount=10&category=26&type=multiple")
 
 ;; -------------------------
 ;; Views
 
 (defn home-page []
-  [:div [:h2 "Celebrity Quiz"]])
+(let [data (atom nil)]
+  (fetch-data! data)
+  (fn []
+  (let [{:strs [results]} @data]
+  (prn (first results))
+  (let [{:strs [category type difficulty question correct_answer incorrect_answers]} (first results)]
+    ; (prn question))
+ 
+    [:div 
+    [:div [:h1 "Celebrity Quiz"]]
+    [:div [:h3 question]
+    [:p str correct_answer]
+    ; [:p str incorrect_answers]
+    ]]
+  )
+))))
+
 
 ;; -------------------------
 ;; Initialize app
