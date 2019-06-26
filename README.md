@@ -4,7 +4,8 @@ This project is a remake of a previous quiz made using React see that [here](htt
 
 I wanted to tinker with ClojureScript and gain an insight into functional programming.
 
-
+To do:
+ - add timer
 
 
 
