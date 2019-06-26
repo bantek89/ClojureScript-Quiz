@@ -1,4 +1,8 @@
-This project is a remake of a previous quiz made using React see that ![here](https://github.com/FAC-Sixteen/b-b/tree/master/src)
+This project is a remake of a previous quiz made using React see that [here](https://github.com/FAC-Sixteen/b-b/tree/master/src)
+
+I wanted to try using ClojureScript and gain insight into functional programming.
+
+
 
 
 
