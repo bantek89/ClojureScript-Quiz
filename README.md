@@ -1,3 +1,6 @@
+This project is a remake of a previous quiz made using React see that ![https://github.com/FAC-Sixteen/b-b/tree/master/src] (here)
+
+
 
 ### Development mode
 To start the Figwheel compiler, navigate to the project folder and run the following command in the terminal:
