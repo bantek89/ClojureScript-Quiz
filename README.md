@@ -2,7 +2,7 @@ Made using ClojureScript and Reagent.
 
 This project is a remake of a previous quiz made using React see that [here](https://github.com/FAC-Sixteen/b-b/tree/master/src)
 
-I wanted to tinker with ClojureScript and gain an insight into functional programming.
+I wanted to tinker with ClojureScript and gain an insight into functional programming :sparkles:
 
 To do:
  - add timer
