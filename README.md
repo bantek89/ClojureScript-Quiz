@@ -6,6 +6,7 @@ I wanted to tinker with ClojureScript and gain an insight into functional progra
 
 To do:
  - add timer
+ - encode response text
 
 ---
 
